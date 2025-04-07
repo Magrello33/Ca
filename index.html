@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -6,181 +6,112 @@
   <title>ECO Caçambas</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
     }
-
     header {
-      background-color: #2a6f3e;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
+      text-align: center;
+      padding: 20px 10px;
+      background-color: white;
     }
-
     header img {
       height: 40px;
-      margin-right: 15px;
+      float: left;
+      margin-left: 20px;
     }
-
     header h1 {
+      font-size: 22px;
       margin: 0;
-      font-size: 2em;
     }
-
-    header p {
-      margin: 0;
-      font-size: 1em;
-      margin-left: auto;
+    .subtitulo {
+      margin-top: 10px;
+      font-size: 15px;
+      color: #555;
     }
-
     .banner {
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+    }
+    .banner img {
       width: 100%;
       height: auto;
       display: block;
-      max-height: 300px;
       object-fit: cover;
     }
-
-    .section {
-      padding: 30px;
+    .form-section {
+      background-color: white;
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
     }
-
-    .section h2 {
-      color: #2a6f3e;
+    .form-section h2 {
+      margin-top: 0;
     }
-
-    .form-container {
-      background-color: white;
-      padding: 30px;
-      margin: 0 auto;
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    input, textarea {
+    form input, form textarea {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
-      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 4px;
+      font-size: 14px;
     }
-
-    button {
-      background-color: #2a6f3e;
+    form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: green;
       color: white;
       border: none;
-      padding: 12px 20px;
-      font-size: 1em;
-      border-radius: 5px;
+      border-radius: 4px;
       cursor: pointer;
     }
-
-    button:hover {
-      background-color: #245e35;
-    }
-
     footer {
-      background-color: #2a6f3e;
-      color: white;
       text-align: center;
-      padding: 15px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .destaque {
-      font-size: 1.2em;
-      color: #1a4a2a;
-      margin-bottom: 20px;
-    }
-
-    img.full {
-      width: 100%;
-      height: auto;
-      max-height: 300px;
-      object-fit: cover;
-    }
-
-    .mensagem-sucesso {
-      display: none;
-      text-align: center;
-      color: green;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      header p {
-        margin-left: 0;
-        margin-top: 5px;
-      }
-
-      .banner, img.full {
-        max-height: 200px;
-      }
+      font-size: 13px;
+      color: #777;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="Logo.PNG" alt="Logo ECO Caçambas" />
-    <h1>ECO Caçambas</h1>
-    <p>Todo o Sudeste</p>
+    <img src="https://i.imgur.com/Rn5Vz9V.png" alt="Logo ECO Caçambas">
+    <h1>Atendimento rápido, fácil e eficiente</h1>
+    <p class="subtitulo">
+      Alugamos caçambas, retroescavadeiras e outros equipamentos para obras e reformas.<br>
+      Atendemos todo o estado de São Paulo e Minas Gerais com agilidade e profissionalismo.<br>
+      Com a ECO Caçambas, você tem garantia de qualidade, rapidez na entrega e retirada, e preços justos. Seja para grandes obras ou pequenas reformas.
+    </p>
   </header>
 
-  <img src="Banner.PNG" alt="Banner ECO Caçambas" class="banner" />
-
-  <div class="section">
-    <h2>Atendimento rápido, fácil e eficiente</h2>
-    <p class="destaque">
-      Alugamos caçambas, retroescavadeiras e outros equipamentos para obras e reformas. 
-      Atendemos todo o estado de São Paulo, Rio de Janeiro e Minas Gerais com agilidade e profissionalismo.
-    </p>
-    <p>
-      Com a ECO Caçambas, você tem garantia de qualidade, rapidez na entrega e retirada, e preços justos. 
-      Seja para grandes obras ou pequenas reformas, conte com a gente!
-    </p>
-    <img src="Maquina.PNG" alt="Máquinas para aluguel" class="full" />
+  <div class="banner">
+    <img src="https://i.imgur.com/g4XWaMt.jpg" alt="Banner Caçambas">
   </div>
 
-  <div class="section form-container">
+  <div class="form-section">
     <h2>Solicite um orçamento</h2>
-    <form id="formulario" action="https://formsubmit.co/ecocacambass@gmail.com" method="POST" onsubmit="mostrarMensagem()">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <input type="tel" name="telefone" placeholder="Telefone ou WhatsApp" required />
-      <textarea name="mensagem" rows="4" placeholder="Descreva o que você precisa" required></textarea>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://obrigado.html">
+    <form action="https://formsubmit.co/seuemail@gmail.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" placeholder="Descreva o que você precisa" rows="4" required></textarea>
       <button type="submit">Enviar</button>
+
+      <!-- Redireciona para página de obrigado -->
+      <input type="hidden" name="_next" value="https://seusite.github.io/obrigado.html">
+      <!-- Remove captcha do FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
     </form>
-    <div class="mensagem-sucesso" id="mensagemSucesso">
-      Mensagem enviada com sucesso! Em breve entraremos em contato.
-    </div>
   </div>
 
   <footer>
-    &copy; 2025 ECO Caçambas - Todos os direitos reservados.
+    ECO Caçambas © Todos os direitos reservados. Desde 2015 atuando com excelência no setor.
   </footer>
 
-  <script>
-    function mostrarMensagem() {
-      document.getElementById("mensagemSucesso").style.display = "block";
-    }
-  </script>
-
 </body>
+</
