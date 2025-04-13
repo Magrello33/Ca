@@ -1,10 +1,9 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ECO Caçambas</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -118,6 +117,46 @@
       margin-top: 15px;
     }
 
+    .whatsapp-fixo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      font-weight: bold;
+    }
+
+    .whatsapp-fixo img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .depoimentos {
+      background-color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .depoimentos h2 {
+      color: #2a6f3e;
+      margin-bottom: 30px;
+    }
+
+    .depoimento {
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      font-style: italic;
+      color: #444;
+    }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -140,8 +179,7 @@
   <header>
     <img src="Logo.PNG" alt="Logo ECO Caçambas" />
     <h1>ECO Caçambas</h1>
-    <p>Entulho, Jardinagem ou Construção? Temos a Caçamba Ideal
-</p>
+    <p>Todo o Sudeste</p>
   </header>
 
   <img src="Banner.PNG" alt="Banner ECO Caçambas" class="banner" />
@@ -157,13 +195,21 @@
       Seja para grandes obras ou pequenas reformas, conte com a gente!
     </p>
 
-    <!-- TRECHO MODIFICADO COM COR VERDE -->
     <p class="destaque">
       <strong style="color: #2a6f3e;">Atendimento 24 horas por dia, 7 dias por semana!</strong><br>
       Entendemos que imprevistos acontecem a qualquer momento. Por isso, a ECO Caçambas está pronta para te atender em qualquer horário, com a mesma agilidade e qualidade de sempre.
     </p>
 
     <img src="Maquina.PNG" alt="Máquinas para aluguel" class="full" />
+  </div>
+
+  <div class="depoimentos">
+    <h2>O que nossos clientes dizem</h2>
+    <p class="depoimento">"Excelente atendimento! Solicitei uma caçamba e em menos de uma hora já estava no local. Recomendo demais!" – João M.</p>
+    <p class="depoimento">"Serviço muito rápido e de qualidade. A ECO Caçambas está de parabéns!" – Ana Paula S.</p>
+    <p class="depoimento">"Precisava urgente de uma retroescavadeira e eles me atenderam à noite, sem enrolação." – Marcos L.</p>
+    <p class="depoimento">"Empresa confiável e com preços justos. Já usei várias vezes e sempre foram impecáveis." – Renata V.</p>
+    <p class="depoimento">"Atendimento 24h de verdade! Fiquei impressionado com a agilidade." – Carlos T.</p>
   </div>
 
   <div class="section form-container">
@@ -182,6 +228,10 @@
     </div>
   </div>
 
+  <a class="whatsapp-fixo" href="https://wa.me/5511937264680" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> Fale conosco
+  </a>
+
   <footer>
     &copy; 2015 ECO Caçambas - Todos os direitos reservados.
   </footer>
@@ -193,4 +243,4 @@
   </script>
 
 </body>
-</html
+</h
