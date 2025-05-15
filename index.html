@@ -2,17 +2,15 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ECO Caçambas</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background: #f2f2f2;
       color: #333;
     }
-
     header {
       background-color: #2a6f3e;
       color: white;
@@ -20,167 +18,65 @@
       display: flex;
       align-items: center;
     }
-
     header img {
       height: 40px;
       margin-right: 15px;
     }
-
     header h1 {
       margin: 0;
       font-size: 2em;
     }
-
     header p {
       margin: 0;
       font-size: 1em;
       margin-left: auto;
     }
-
     .banner {
       width: 100%;
       height: auto;
-      display: block;
       max-height: 300px;
       object-fit: cover;
+      display: block;
     }
-
     .section {
       padding: 30px;
       text-align: center;
-    }
-
-    .section h2 {
-      color: #2a6f3e;
-    }
-
-    .form-container {
-      background-color: white;
-      padding: 30px;
-      margin: 0 auto;
-      max-width: 500px;
+      background: white;
+      margin: 20px auto;
+      max-width: 900px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
+    h2 {
+      color: #2a6f3e;
       margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
     }
-
-    button {
-      background-color: #2a6f3e;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 1em;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #245e35;
-    }
-
-    footer {
-      background-color: #2a6f3e;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-
     .destaque {
       font-size: 1.2em;
       color: #1a4a2a;
       margin-bottom: 20px;
+      font-weight: bold;
     }
-
     img.full {
       width: 100%;
-      height: auto;
       max-height: 300px;
       object-fit: cover;
+      margin-top: 20px;
+      border-radius: 10px;
     }
-
-    .mensagem-sucesso {
-      display: none;
-      text-align: center;
-      color: green;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-
-    .whatsapp-fixo {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-      background-color: #25d366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      font-weight: bold;
-    }
-
-    .whatsapp-fixo img {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-    }
-
-    .depoimentos {
-      background-color: #ffffff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .depoimentos h2 {
-      color: #2a6f3e;
-      margin-bottom: 30px;
-    }
-
-    .depoimento {
-      max-width: 600px;
-      margin: 0 auto 20px auto;
-      font-style: italic;
-      color: #444;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .tabela-precos {
-      background-color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .tabela-precos table {
+    table {
       width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
       border-collapse: collapse;
+      margin-top: 20px;
     }
-
-    .tabela-precos th, .tabela-precos td {
+    th, td {
       border: 1px solid #ccc;
       padding: 12px;
     }
-
-    .tabela-precos th {
+    th {
       background-color: #2a6f3e;
       color: white;
     }
-
     .btn-pagamento {
       background-color: #25d366;
       color: white;
@@ -189,115 +85,172 @@
       border-radius: 5px;
       cursor: pointer;
       font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
     }
-
+    .btn-pagamento:hover {
+      background-color: #1ebe57;
+    }
+    .depoimento {
+      font-style: italic;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #2a6f3e;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #245e35;
+    }
+    footer {
+      background-color: #2a6f3e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #a9d18e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
     @media (max-width: 600px) {
       header {
         flex-direction: column;
         text-align: center;
       }
-
       header p {
         margin-left: 0;
         margin-top: 5px;
       }
-
       .banner, img.full {
         max-height: 200px;
+      }
+      form {
+        padding: 0 10px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="Logo.PNG" alt="Logo ECO Caçambas" />
-    <h1>ECO Caçambas</h1>
-    <p>Atendemos todo o Brasil</p>
-  </header>
+<header>
+  <img src="Logo.PNG" alt="Logo ECO Caçambas" />
+  <h1>ECO Caçambas</h1>
+  <p>Atendemos todo o Brasil</p>
+</header>
 
-  <img src="Baner.png" alt="Banner ECO Caçambas" class="banner" />
+<img src="Baner.png" alt="Banner ECO Caçambas" class="banner" />
 
-  <div class="section">
-    <h2>Ecocaçambas a Mais de 10 Anos Prestando Atendimento rápido, fácil e eficiente</h2>
-    <p class="destaque">
-      Alugamos caçambas, retroescavadeiras e outros equipamentos para obras e reformas. 
-      Atendemos todo o Brasil com agilidade e profissionalismo.
-    </p>
-    <p>
-      Com a ECO Caçambas, você tem garantia de qualidade, rapidez na entrega e retirada, e preços justos. 
-      Seja para grandes obras ou pequenas reformas, conte com a gente!
-    </p>
-    <p class="destaque">
-      <strong style="color: #2a6f3e;">Atendimento 24 horas por dia, 7 dias por semana!</strong><br>
-      Entendemos que imprevistos acontecem a qualquer momento. Por isso, a ECO Caçambas está pronta para te atender em qualquer horário, com a mesma agilidade e qualidade de sempre.
-    </p>
-    <img src="Maquina.PNG" alt="Máquinas para aluguel" class="full" />
-  </div>
+<div class="section">
+  <h2>Ecocaçambas - Mais de 10 anos prestando atendimento rápido, fácil e eficiente</h2>
+  <p class="destaque">
+    Alugamos caçambas, retroescavadeiras e outros equipamentos para obras e reformas.
+  </p>
+  <p>
+    Atendemos todo o Brasil com agilidade e profissionalismo.
+    Com a ECO Caçambas, você tem garantia de qualidade, rapidez na entrega e retirada, e preços justos.
+  </p>
+  <p class="destaque">
+    Atendimento 24 horas por dia, 7 dias por semana!
+  </p>
+  <img src="Maquina.PNG" alt="Máquinas para aluguel" class="full" />
+</div>
 
-  <div class="tabela-precos">
-    <h2>Tabela de Preços</h2>
-    <table>
-      <tr>
-        <th>Serviço</th>
-        <th>Preço</th>
-        <th>Pagamento</th>
-      </tr>
-      <tr>
-        <td>Caçamba Média Por Dia</td>
-        <td>R$ 250,00</td>
-        <td><a class="btn-pagamento" href="https://www.asaas.com/c/vauv8uujwlcxxfa1" target="_blank">Pagar</a></td>
-      </tr>
-      <tr>
-        <td>Caçamba Grande Por Dia</td>
-        <td>R$ 300,00</td>
-        <td><a class="btn-pagamento" href="https://www.asaas.com/c/2mo7vic9n2mp86no" target="_blank">Pagar</a></td>
-      </tr>
-      <tr>
-        <td>Caçamba Extra Grande Por Dia</td>
-        <td>R$ 410,00</td>
-        <td><a class="btn-pagamento" href="https://www.asaas.com/c/amrovymydgfsp5ki" target="_blank">Pagar</a></td>
-      </tr>
-      <tr>
-        <td>Outros Serviços</td>
-        <td>R$ 180,00</td>
-        <td><a class="btn-pagamento" href="https://www.asaas.com/c/y824td3t0n1ht5hw" target="_blank">Pagar</a></td>
-      </tr>
-    </table>
-  </div>
+<div class="section">
+  <h2>Tabela de Preços</h2>
+  <table>
+    <tr>
+      <th>Serviço</th>
+      <th>Preço</th>
+      <th>Pagamento</th>
+    </tr>
+    <tr>
+      <td>Caçamba Média Por Dia</td>
+      <td>R$ 250,00</td>
+      <td><a href="https://www.asaas.com/c/vauv8uujwlcxxfa1" target="_blank" class="btn-pagamento">Pagar</a></td>
+    </tr>
+    <tr>
+      <td>Caçamba Grande Por Dia</td>
+      <td>R$ 300,00</td>
+      <td><a href="https://www.asaas.com/c/2mo7vic9n2mp86no" target="_blank" class="btn-pagamento">Pagar</a></td>
+    </tr>
+    <tr>
+      <td>Caçamba Extra Grande Por Dia</td>
+      <td>R$ 410,00</td>
+      <td><a href="https://www.asaas.com/c/amrovymydgfsp5ki" target="_blank" class="btn-pagamento">Pagar</a></td>
+    </tr>
+    <tr>
+      <td>Outros Serviços</td>
+      <td>R$ 180,00</td>
+      <td><a href="https://www.asaas.com/c/y824td3t0n1ht5hw" target="_blank" class="btn-pagamento">Pagar</a></td>
+    </tr>
+  </table>
+</div>
 
-  <div class="depoimentos">
-    <h2>O que nossos clientes dizem</h2>
-    <p class="depoimento">"Excelente atendimento! Solicitei uma caçamba e em menos de uma hora já estava no local. Recomendo demais!" – João M.</p>
-    <p class="depoimento">"Serviço muito rápido e de qualidade. A ECO Caçambas está de parabéns!" – Ana Paula S.</p>
-    <p class="depoimento">"Precisava urgente de uma retroescavadeira e eles me atenderam à noite, sem enrolação." – Marcos L.</p>
-    <p class="depoimento">"Empresa confiável e com preços justos. Já usei várias vezes e sempre foram impecáveis." – Renata V.</p>
-    <p class="depoimento">"Atendimento 24h de verdade! Fiquei impressionado com a agilidade." – Carlos T.</p>
-  </div>
+<div class="section">
+  <h2>Depoimentos</h2>
+  <p class="depoimento">"Excelente atendimento! Solicitei uma caçamba e em menos de uma hora já estava no local. Recomendo demais!" – João M.</p>
+  <p class="depoimento">"Serviço muito rápido e de qualidade. A ECO Caçambas está de parabéns!" – Ana Paula S.</p>
+  <p class="depoimento">"Precisava urgente de uma retroescavadeira e eles me atenderam à noite, sem enrolação." – Marcos L.</p>
+  <p class="depoimento">"Empresa confiável e com preços justos. Já usei várias vezes e sempre foram impecáveis." – Renata V.</p>
+  <p class="depoimento">"Atendimento 24h de verdade! Fiquei impressionado com a agilidade." – Carlos T.</p>
+</div>
 
-  <div class="section form-container">
-    <h2>Solicite um orçamento</h2>
-    <form id="formulario" action="https://formsubmit.co/ecocacambass@gmail.com" method="POST" onsubmit="mostrarMensagem()">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <input type="tel" name="telefone" placeholder="Telefone ou WhatsApp" required />
-      <textarea name="mensagem" rows="4" placeholder="Descreva o que você precisa" required></textarea>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://ecocaçamba.site/obrigado.html">
-      <button type="submit">Enviar</button>
-    </form>
-    <div class="mensagem-sucesso" id="mensagemSucesso">
-      Mensagem enviada com sucesso! Em breve entraremos em contato.
-    </div>
-  </div>
+<div class="section">
+  <h2>Contato</h2>
+  <form action="https://formsubmit.co/alunospilotos@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false" />
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="Nome" required />
 
-  <a class="whatsapp-fixo" href="https://wa.me/5511937264680" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> Fale conosco
-  </a>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="Email" required />
 
-  <footer>
-    &copy; 2013 ECO Caçambas - Todos os direitos reservados.
-  </footer>
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="Telefone" />
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="Mensagem" rows="5" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<footer>
+  <p>© 2013 ECO Caçambas - Todos os direitos reservados | 
+    <a href="Politica-Privacidade.html">Política de Privacidade</a>
+  </p>
+</footer>
 
 </body>
 </html>
